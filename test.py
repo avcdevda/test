@@ -39,7 +39,7 @@ def start(df):
     
     
 def main():
-    df=pd.read_csv("/Users/my/Desktop/스터디 발표/myfile.csv",encoding="cp949")
+    df=pd.read_csv("myfile.csv",encoding="cp949")
     df=start(df)
     
     
