@@ -63,7 +63,6 @@ def main():
         size=len(tempLocal)
     st.write(f"강좌 수는 {size}개 입니다")
     
-    st.write(size)
     #표 보여주기
     if not (tempLocal.empty and tempValue.empty):
         if tempLocal.empty:
