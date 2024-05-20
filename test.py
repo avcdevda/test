@@ -73,9 +73,13 @@ def main():
         else:
             tempLocal=tempLocal.reset_index(drop=True)
             st.dataframe(tempLocal)
+            st.dataframe(tempLocal)
     else:
-        df=df.reset_index(drop=True)
-        st.dataframe(df)
+        if size==0:
+            st.dataframe(tempValue)
+        else:
+            df=df.reset_index(drop=True)
+            st.dataframe(df)
         
 if __name__=="__main__":
     main()
