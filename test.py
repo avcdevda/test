@@ -5,7 +5,6 @@ from datetime import datetime
 
 
 def start(df):
-    
     st.header("부산시 강좌 개설 현황")
     date=datetime.today()
     
@@ -40,7 +39,7 @@ def start(df):
     
     
 def main():
-    df=pd.read_csv("myfile.csv",encoding="cp949")
+    df=pd.read_csv("/Users/my/Desktop/스터디 발표/myfile.csv",encoding="cp949")
     df=start(df)
     
     
@@ -64,7 +63,7 @@ def main():
         size=len(tempLocal)
     st.write(f"강좌 수는 {size}개 입니다")
     
-    
+    st.write(size)
     #표 보여주기
     if not (tempLocal.empty and tempValue.empty):
         if tempLocal.empty:
@@ -72,7 +71,6 @@ def main():
             st.dataframe(tempValue)
         else:
             tempLocal=tempLocal.reset_index(drop=True)
-            st.dataframe(tempLocal)
             st.dataframe(tempLocal)
     else:
         if size==0 and tempLocal.empty:
