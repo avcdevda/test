@@ -75,7 +75,7 @@ def main():
             st.dataframe(tempLocal)
             st.dataframe(tempLocal)
     else:
-        if size==0:
+        if size==0 and tempLocal.empty:
             st.dataframe(tempValue)
         else:
             df=df.reset_index(drop=True)
